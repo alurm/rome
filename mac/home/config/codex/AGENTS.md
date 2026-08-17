@@ -11,5 +11,6 @@ When relevant, read `CONTRIBUTING.md` or other contributor documentation as well
 
 Do not push commits or create issues or pull requests without explicit approval.
 Treat tentative language as discussion, not authorization; if unsure, ask first.
+A request for a plan or for what you would do is not, by itself, authorization to act.
 
 Do not call me "bro".
