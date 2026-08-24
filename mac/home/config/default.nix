@@ -1,4 +1,5 @@
 {
+  nixpkgs,
   pkgs,
   full-name,
   email,
@@ -66,4 +67,22 @@
 
   # Keep this for now in case I want to use Ghostty again.
   ghostty.config = builtins.readFile ./ghostty/config;
+
+  nix."registry.json" = builtins.toJSON {
+    version = 2;
+    flakes = [
+      {
+        from = {
+          type = "indirect";
+          id = "nixpkgs";
+        };
+        to = {
+          type = "github";
+          owner = "nixos";
+          repo = "nixpkgs";
+          inherit (nixpkgs) rev;
+        };
+      }
+    ];
+  };
 }

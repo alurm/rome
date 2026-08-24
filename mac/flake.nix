@@ -43,7 +43,7 @@
       username = "alurm";
     };
 
-    home = import ./home (info // {inherit pkgs lib;});
+    home = import ./home (info // {inherit nixpkgs pkgs lib;});
   in {
     inherit home;
 
@@ -63,8 +63,8 @@
             json2dir
             system
             writeShellApplication
-
-            ;my = info;
+            ;
+          my = info;
         })
 
         # My software.
