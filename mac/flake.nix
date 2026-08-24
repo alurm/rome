@@ -104,28 +104,27 @@
 
         # Neovim.
 
-        (neovim.override {
-          configure = {
-            customRC = ''
-              luafile ~/.config/nvim/init.lua
-            '';
-            packages.plugins = with pkgs.vimPlugins; {
-              start = [
-                nvim-treesitter.withAllGrammars
-                telescope-nvim
-                nvim-lspconfig
-                oil-nvim
-              ];
-            };
-          };
-        })
+        # (neovim.override {
+        #   configure = {
+        #     customRC = ''
+        #       luafile ~/.config/nvim/init.lua
+        #     '';
+        #     packages.plugins = with pkgs.vimPlugins; {
+        #       start = [
+        #         nvim-treesitter.withAllGrammars
+        #         telescope-nvim
+        #         nvim-lspconfig
+        #         oil-nvim
+        #       ];
+        #     };
+        #   };
+        # })
 
         # Used rarely or niche.
 
         tmux
         nushell
         caddy
-        gemini-cli
         bat
         ripgrep
         cloc
@@ -165,7 +164,7 @@
         python3
         pyright
         ruff
-        ty
+        # ty
         uv
 
         # Bash.

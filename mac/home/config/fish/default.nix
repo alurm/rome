@@ -60,6 +60,7 @@ pkgs: {
             ~/go/bin \
             ${pkgs.tiddlywiki}/bin \
             $PLAN9/bin \
+            /Applications/Tailscale.app/Contents/MacOS \
             ()
 
         # === PATH ===
