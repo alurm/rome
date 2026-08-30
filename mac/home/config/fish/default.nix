@@ -64,6 +64,12 @@ pkgs: {
             ()
 
         # === PATH ===
+
+        # === Hooks ===
+
+        zoxide init fish | source
+        
+        # === Hooks ===
     end
   '';
 }
