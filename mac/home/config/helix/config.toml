@@ -1,4 +1,4 @@
-theme = "fleet_dark"
+theme = "dark_plus"
 
 [editor]
 gutters = ["diagnostics", "diff"]
