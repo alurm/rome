@@ -50,20 +50,21 @@ my: {
     // service "alurm.hister" ''
       exec ${my.pkgs.hister}/bin/hister listen
     ''
-    # "Remapping Keys in macOS 10.12 Sierra".
-    # https://developer.apple.com/library/archive/technotes/tn2450/_index.html
-    # `hidutil` accepts hexadecimal integers.
-    # Map the right command key to the left control key.
-    // oneshot "alurm.keyboard.mappings" ''
-      /usr/bin/hidutil property --set '{
-        "UserKeyMapping": [
-          {
-            "HIDKeyboardModifierMappingSrc": 0x7000000E7,
-            "HIDKeyboardModifierMappingDst": 0x7000000E0
-          }
-        ]
-      }'
-    ''
+    
+    # # "Remapping Keys in macOS 10.12 Sierra".
+    # # https://developer.apple.com/library/archive/technotes/tn2450/_index.html
+    # # `hidutil` accepts hexadecimal integers.
+    # # Map the right command key to the left control key.
+    # // oneshot "alurm.keyboard.mappings" ''
+    #   /usr/bin/hidutil property --set '{
+    #     "UserKeyMapping": [
+    #       {
+    #         "HIDKeyboardModifierMappingSrc": 0x7000000E7,
+    #         "HIDKeyboardModifierMappingDst": 0x7000000E0
+    #       }
+    #     ]
+    #   }'
+    # ''
    
     # Legacy code.
     #
