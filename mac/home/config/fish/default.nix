@@ -26,7 +26,7 @@ pkgs: {
 
         # === Plan 9 ===
 
-        # set --export PLAN9 ''${pkgs.plan9port}/plan9
+        set --export PLAN9 ${pkgs.plan9port}/plan9
 
         # Use the default MacOS monospace font.
         set --export font /mnt/font/Menlo-Regular/13a/font
