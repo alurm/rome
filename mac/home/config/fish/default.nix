@@ -22,7 +22,7 @@ pkgs: {
         # Needed for a manually installed patched version.
         set --export HELIX_RUNTIME ~/.nix-profile/lib/runtime
 
-        set --export EDITOR hx
+        set --export EDITOR emacsclient
 
         # === Plan 9 ===
 
