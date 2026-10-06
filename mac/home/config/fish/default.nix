@@ -56,7 +56,7 @@ pkgs: {
 
         set --export --append PATH \
             '/Applications/Visual Studio Code.app/Contents/Resources/app/bin' \
-            /Applications/Emacs.app/Contents/MacOS \
+            /Applications/Emacs.app/Contents/MacOS{,/bin} \
             ~/go/bin \
             ${pkgs.tiddlywiki}/bin \
             $PLAN9/bin \
