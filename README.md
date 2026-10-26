@@ -11,7 +11,7 @@ Configuration for the computers I use.
 
 #### Etymology
 
-From *Mac*, a clipping of *Macintosh*.
+From *Mac*, clipping of *Macintosh*.
 
 #### Noun
 
