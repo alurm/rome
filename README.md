@@ -1,14 +1,13 @@
-# Rome — configuration for computers I use
-
-> All roads lead to Rome. \
-> — Alan of Lille
+# All roads lead to Rome
 
 > Rome wasn't built in a day. \
 > — *Li Proverbe au Vilain*
 
+Configuration for the computers I use.
+
 ## Glossary
 
-### [`mac`](mac)
+### [mac](mac)
 
 #### Etymology
 
