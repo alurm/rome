@@ -52,11 +52,11 @@
     packages.${system}.default = pkgs.buildEnv {
       name = "profile";
       paths = with pkgs; [
-        # A dummy package to install all the deps of home.
+        # A dummy package to capture all the deps of `home`
 
         (import ./packages/home.nix {inherit system pkgs home;})
 
-        # Applies dotfiles.
+        # A way to apply dotfiles
 
         (import ./packages/apply-dotfiles.nix {
           inherit
@@ -67,26 +67,31 @@
           my = info;
         })
 
-        # My software.
+        # Some of my own software
 
         lsbig.packages.${system}.default
         json2dir.packages.${system}.default
 
-        # Scripts, wrappers.
+        # Other scripts and wrappers
 
         (import ./packages/my-acme.nix pkgs)
+        (import ./packages/be-awake-until-lid-opens.nix pkgs)
 
-        # Tools.
-
-        # jujutsu
+        # A `jujutsu` fork
+        
         jj.packages.${system}.default
+
+        # Some tools
 
         atool
         rlwrap
         ffmpeg
         typst
         yt-dlp-light
-        claude-code
+        claude-code # Do I even need this?
+        gh
+
+        # Questionable
 
         # Lol. Lmao, even.
         #
@@ -98,11 +103,18 @@
           '';
         })
 
-        # Text editors.
+        # Text editing
 
         helix
+        emacs
 
-        # Neovim.
+        # ## Emacs
+        #
+        # emacs.pkgs.vterm
+        # emacs.pkgs.treesit-grammars.with-all-grammars
+        # emacs.pkgs.nix-ts-mode
+
+        # Neovim
 
         # (neovim.override {
         #   configure = {
@@ -120,7 +132,7 @@
         #   };
         # })
 
-        # Used rarely or niche.
+        # Used rarely or niche
 
         tmux
         nushell
@@ -138,8 +150,26 @@
         rclone
         tiddlywiki
         xz
+        act
+        android-tools
+        cachix
+        coreutils
+        devcontainer
+        dos2unix
+        hyperfine
+        jjui
+        lldb # Do we need this?
+        pigz
+        pngpaste
+        qemu
+        sccache # We are apparently using this with `cargo`.
+        scrcpy
+        sshfs
+        w3m
+        yamlfmt
+        zoxide
 
-        # Programming and configuration languages.
+        # Programming and configuration languages, their runtimes and tooling
 
         lua5_4
         jq
@@ -148,18 +178,22 @@
         ghc
         ghostscript
         nodejs
+        bash
+        deno
+        hadolint # A linter for Docker.
+        php
 
-        # Go.
+        # Go
 
         go
         gopls
 
-        # Zig.
+        # Zig
 
         zig
         zls
 
-        # Python.
+        # Python
 
         python3
         pyright
@@ -167,35 +201,32 @@
         # ty
         uv
 
-        # Bash.
+        # Bash
 
         bash-language-server
         shfmt
         shellcheck
 
-        # Nix.
+        # Nix
 
         direnv
+        devenv
         nix-direnv
         nil
         nix-tree
+        nixd # Do we need this?
 
-        ## Seems to be better to me than nixfmt-rfc-style.
+        ## A formatter. Seems to be better to me than nixfmt-rfc-style
 
         alejandra
 
-        # Web, JavaScript, TypeScript.
+        # Web, JavaScript, TypeScript
 
         prettier
         typescript
         typescript-language-server
         vscode-langservers-extracted
-
-        # Emacs.
-        #
-        # emacs.pkgs.vterm
-        # emacs.pkgs.treesit-grammars.with-all-grammars
-        # emacs.pkgs.nix-ts-mode
+        eslint # Do I need this?
       ];
     };
   };
