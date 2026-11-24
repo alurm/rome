@@ -196,9 +196,6 @@
         # Python
 
         python3
-        pyright
-        ruff
-        # ty
         uv
 
         # Bash
