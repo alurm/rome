@@ -39,7 +39,7 @@ pkgs: {
 
         ## Allow installation of packages via `nix profile add`.
 
-        set --export PYTHONPATH ~/.nix-profile/lib/python${
+        # set --export PYTHONPATH ~/.nix-profile/lib/python${
           ({ major, minor, ... }: "${major}.${minor}") pkgs.python3.sourceVersion
         }/site-packages
 
@@ -68,6 +68,7 @@ pkgs: {
         # === Hooks ===
 
         zoxide init fish | source
+        direnv hook fish | source
         
         # === Hooks ===
     end
